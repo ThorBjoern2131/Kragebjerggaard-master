@@ -34,7 +34,7 @@ export default class produkter {
             <div class="row">
                 
                 <div class="col-4">
-                        <img src="images/${item.prodimage}" class="card-img-top" alt="cover">
+                        <img src="images/${item.prodImage}" class="card-img-top" alt="cover">
                 </div>
               
                 <div class="col-6">
@@ -43,8 +43,7 @@ export default class produkter {
                         <h5 class="card-text">${item.prodBeskrivelse} </h5>
                         <h5 class="card-text">${item.prodVare} </h5>
                         <p class="card-text">${item.prodPris} </p>
-                        <p class="card-text">${item.prodMængde} </p>
-                        <p class="card-text">${item.prodImage} </p>
+                        <p class="card-text">${item.prodAmount} </p>
                         <a href="seprodukt.php" class="btn btn-primary text-white w-100">Se produkt</a>
                     </div>
                 </div>
