@@ -1,17 +1,7 @@
 <?php
 require "settings/init.php";
 
-if(!empty($GET["type"])) {
-    if($_GET["type"] == "slet") {
-        $id = $_GET["id"];
-
-        $db->sql("DELETE FROM /*DATABASE", [":Data1"=>$id], false);
-
-        header("Location: index.php");
-    }
-}
-
-$produkter = $db->sql("SELECT * FROM /*DATABASE");
+$produkter = $db->sql("SELECT * FROM produkter");
 
 ?>
 <!-- Instruktion til webbrowser om at vi kører HTML5 -->
@@ -51,7 +41,40 @@ $produkter = $db->sql("SELECT * FROM /*DATABASE");
 
 <body>
 
+<div class="container">
+
+    <div class="produkter p-3 m-3">
+        <div class="filter">
+            <div class="row">
+                <div class="col-md-4 offset-md-4">
+                    <input type="search" class="form-control nameSearch" placeholder="søg">
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <div class="items">
+
+        </div>
+
+    </div>
+
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function myFunction(x) {
+            x.classList.toggle("change");
+        }
+    </script>
+
+    <script type="module">
+        import produkter from "./js/butik.js";
+
+        const butik = new produkter();
+        butik.init();
+
+    </script>
+
 </body>
 </html>
 }
