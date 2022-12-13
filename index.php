@@ -77,4 +77,3 @@ $produkter = $db->sql("SELECT * FROM produkter");
 
 </body>
 </html>
-}
