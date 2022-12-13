@@ -1,3 +1,3 @@
-# Kickstarter projekt med PHP
+# Kragebjerggård E2022 Thor-Bjørn, Mads og Simon
 
-Klon dette projekt og kom hurtigt i gang med dit næste projekt.
+Eksamensprojekt 3. semester 2022F / Årgang 2021E

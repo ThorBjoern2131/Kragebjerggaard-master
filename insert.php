@@ -10,7 +10,7 @@ if(!empty($_POST["data"])){
 
     $db->sql( $sql, $bind, false);
 
-    echo "DATABASE data insendt <a href='insert.php'>Vil du tilføje flere?</a>";
+    echo "DATABASE data indsendt <a href='insert.php'>Vil du tilføje flere?</a>";
 }
 
 ?>
@@ -33,7 +33,7 @@ if(!empty($_POST["data"])){
     <meta property="og:url" content="https://www.Kragebjerggård.dk"/>
     <meta property="og:image" content=""/>
     <meta property="og:description" content=""/>
-    <meta property="og:locale" content="da_DK"
+    <meta property="og:locale" content="da_DK"/>
 
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
