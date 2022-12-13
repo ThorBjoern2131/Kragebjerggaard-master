@@ -22,9 +22,18 @@ if(!empty($_POST["data"])){
 
     <title>Kragebjerggård</title>
 
+    <!-- Metatags der fortæller at søgemaskiner er velkommen, hvem der udgiver siden og copyright information -->
+    <meta name="description" content="Kragebjerggård">
     <meta name="robots" content="All">
     <meta name="author" content="Udgiver">
     <meta name="copyright" content="Information om copyright">
+    <meta name="keywords" content="Kragebjerggård,">
+    <meta property="og:title" content="Kragebjerggård"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://www.Kragebjerggård.dk"/>
+    <meta property="og:image" content=""/>
+    <meta property="og:description" content=""/>
+    <meta property="og:locale" content="da_DK"
 
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
