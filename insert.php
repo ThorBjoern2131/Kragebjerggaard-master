@@ -5,7 +5,7 @@ require "settings/init.php";
 if(!empty($_POST["data"])){
     $data = $_POST["data"];
 
-    $sql = "INSERT INTO produkter (DATABASE) VALUES(:DATABASE)";
+    $sql = "INSERT INTO DATABASE (DATABASE) VALUES(:DATABASE)";
     $bind = [":DATABASE" => $data["DATABASE"]];
 
     $db->sql( $sql, $bind, false);

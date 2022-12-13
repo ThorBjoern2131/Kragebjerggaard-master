@@ -5,7 +5,7 @@ if(!empty($GET["type"])) {
     if($_GET["type"] == "slet") {
         $id = $_GET["id"];
 
-        $db->sql("DELETE FROM /*DATABASE", [":Kunstner"=>$id], false);
+        $db->sql("DELETE FROM /*DATABASE", [":Data1"=>$id], false);
 
         header("Location: index.php");
     }
@@ -26,7 +26,7 @@ $produkter = $db->sql("SELECT * FROM /*DATABASE");
     <meta charset="utf-8">
 
     <!-- Titel som ses oppe i browserens tab mv. -->
-    <title>Musik Paladset</title>
+    <title>Kragebjerggård</title>
 
     <!-- Metatags der fortæller at søgemaskiner er velkommen, hvem der udgiver siden og copyright information -->
     <meta name="description" content="Kragebjerggård">
