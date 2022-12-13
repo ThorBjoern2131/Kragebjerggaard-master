@@ -34,7 +34,7 @@ export default class produkter {
             <div class="row">
                 
                 <div class="col-4">
-                        <img src="images/${item.prodimage}" class="card-img-top" alt="cover">
+                        <img src="images/${item.prodImage}" class="card-img-top" alt="cover">
                 </div>
               
                 <div class="col-6">
