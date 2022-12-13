@@ -43,7 +43,7 @@ export default class produkter {
                         <h5 class="card-text">${item.prodBeskrivelse} </h5>
                         <h5 class="card-text">${item.prodVare} </h5>
                         <p class="card-text">${item.prodPris} </p>
-                        <p class="card-text">${item.prodMængde} </p>
+                        <p class="card-text">${item.prodAmount} </p>
                         <p class="card-text">${item.prodImage} </p>
                         <a href="seprodukt.php" class="btn btn-primary text-white w-100">Se produkt</a>
                     </div>
