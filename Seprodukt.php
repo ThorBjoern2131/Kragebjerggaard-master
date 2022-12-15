@@ -1,9 +1,11 @@
 <?php
-require "settings/init.php";
 
-$produkter = $db->sql("SELECT * FROM produkter");
+require "settings/init.php";
+$id = $_GET["id"];
+$produkter = $db->sql("SELECT * FROM produkter where prodId= $id");
 
 ?>
+
 <!-- Instruktion til webbrowser om at vi kører HTML5 -->
 <!DOCTYPE html>
 
@@ -38,8 +40,6 @@ $produkter = $db->sql("SELECT * FROM produkter");
     <!-- Sikrer den vises korrekt på mobil, tablet mv. ved at tage ift. skærmstørrelse - bliver brugt til responsive websider -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-
-
 <body>
 
 <nav class="navbar navbar-expand-lg bg-light" style="height: 4rem">
@@ -51,7 +51,7 @@ $produkter = $db->sql("SELECT * FROM produkter");
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" href="Shop.php">Shop</a>
@@ -69,37 +69,55 @@ $produkter = $db->sql("SELECT * FROM produkter");
         </div>
 </nav>
 
-<div class="container">
+<div class="container beskrivelse justify-content-center">
+    <?php
+    foreach ($produkter
 
-    <div class="produkter p-3 m-3">
-        <div class="filter">
-            <div class="row">
-                <div class="col-md-4 offset-md-4">
-                    <input type="search" class="form-control nameSearch" placeholder="søg">
-                </div>
-            </div>
+    as $produkt) {
+    ?>
+
+<div class="container d-flex">
+    <div class="row">
+
+        <div class="col-lg-6">
+            <img src="#" class="card-img-top" style="max-width: 25rem;" alt="cover">
+        </div>
+
+        <div class="col-lg-4">
+            <a href="Seprodukt.php"><h5 class="card-title"><?php echo $produkt->prodNavn; ?></h5>
+            </a>
+            <p class="card-text">
+                <?php echo $produkt->prodBeskrivelse ?>
+                <br>
+                <?php echo $produkt->prodVare ?>
+            </p>
             <br>
+                <?php echo $produkt->prodPris ?>
+            <br><br>
 
-            <div class="items"></div>
-
-
+                <?php echo $produkt->prodAmount ?>
+            </div>
+        </div>
     </div>
+</div>
+<?php
+}
+?>
 
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script>
-        function myFunction(x) {
-            x.classList.toggle("change");
-        }
-    </script>
+<script>
+    function myFunction(x) {
+        x.classList.toggle("change");
+    }
+</script>
 
-    <script type="module">
-        import produkter from "./butik.js";
+<script type="module">
+    import produkter from "./shop.js";
 
-        const butik = new produkter();
-        butik.init();
+    const shop = new produkter();
+    shop.init();
 
-    </script>
+</script>
 
 </body>
-</html>

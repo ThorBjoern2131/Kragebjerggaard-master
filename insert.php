@@ -1,18 +1,17 @@
 <?php
-
 require "settings/init.php";
 
-if(!empty($_POST["data"])){
-    $data = $_POST["data"];
+if(!empty($_post["data"])){
+    $data = $_post["data"];
 
-    $sql = "INSERT INTO DATABASE (DATABASE) VALUES(:DATABASE)";
-    $bind = [":DATABASE" => $data["DATABASE"]];
+    $sql = "INSERT INTO produkter (prodNavn, prodBeskrivelse, prodPris, prodDato, prodimage, prodformat, prodgenre, prodforfatter, prodrate) values(:prodNavn, :prodBeskrivelse, :prodPris, :prodDato, :prodimage, :prodformat, :prodgenre, :prodforfatter, :prodrate)";
+    $bind = [":prodNavn" => $data["prodNavn"], ":prodBeskrivelse" => $data["prodBeskrivelse"], ":prodPris" => $data["prodPris"], ":prodDato" => $data["prodDato"], ":prodimage" => $data["prodimage"], ":prodformat" => $data["prodformat"], ":prodgenre" => $data["prodgenre"], ":prodforfatter" => $data["prodforfatter"], ":prodrate" => $data["prodrate"]];
 
-    $db->sql( $sql, $bind, false);
+    $db->sql($sql, $bind, false);
 
-    echo "DATABASE data indsendt <a href='insert.php'>Vil du tilføje flere?</a>";
+    echo "Produktet er nu indsat. <a href='insert.php'>Indsæt et produkt mere</a>";
+    exit;
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -44,26 +43,88 @@ if(!empty($_POST["data"])){
 
 <body>
 
-<form method="post" action="insert.php">
+<form method="post" action="insert.php" enctype="multipart/form-data">
     <div class="row">
+
         <div class="col-12 col-md-6">
             <div class="form-group">
-                <label for="DATABASE">DATABASE</label>
-                <input class="form-control" type="text" name="data[DATABASE]" id="DATABASE" placeholder="DATABASE" value="">
+                <label for="prodNavn">Produkt navn</label>
+                <input class="form-control" type="text" name="data[prodNavn]" id="prodNavn" placeholder="" value="">
             </div>
         </div>
-    </div>
 
+        <div class="col-12 col-md-6">
+            <div class="form-group">
+                <label for="proPris">Produkt pris</label>
+                <input class="form-control" type="number" step="0.1" name="data[proPris]" id="proPris" placeholder="" value="">
+            </div>
+        </div>
+
+        <div class="col-12">
+            <div class="form-group">
+                <label for="prodBeskrivelse">Produkt beskrivelse</label>
+                <textarea class="form-control" name="data[prodBeskrivelse]" id="prodBeskrivelse"></textarea>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+            <div class="form-group">
+                <label for="prodDato">Produkt udgivelse</label>
+                <input class="form-control" type="number" step="0.1" name="data[prodDato]" id="prodDato" placeholder="" value="">
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+            <div class="form-group">
+                <label for="prodimage">Produkt billed</label>
+                <input class="form-control" type="file" name="data[prodimage]" id="prodimage" placeholder="" value="">
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+            <div class="form-group">
+                <label for="prodformat">Produkt format</label>
+                <input class="form-control" type="text" name="data[prodformat]" id="prodformat" placeholder="" value="">
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+            <div class="form-group">
+                <label for="prodgenre">Produkt genre</label>
+                <input class="form-control" type="text" name="data[prodgenre]" id="prodgenre" placeholder="" value="">
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+            <div class="form-group">
+                <label for="prodforfatter">Produkt forfatter</label>
+                <input class="form-control" type="text" name="data[prodforfatter]" id="prodforfatter" placeholder="" value="">
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+            <div class="form-group">
+                <label for="prodrate">Produkt rating</label>
+                <input class="form-control" type="number" step="0.1" name="data[prodrate]" id="prodrate" placeholder="" value="">
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 offset-md-6">
+            <button class="form-control btn btn-primary" type="submit" id="btnSubmit">Opret produkt</button>
+        </div>
+
+    </div>
 </form>
 
 
-
-<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script>
     tinymce.init({
         selector: 'textarea'
     });
 </script>
+
+
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
 
