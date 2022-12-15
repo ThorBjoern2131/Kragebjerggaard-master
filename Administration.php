@@ -1,19 +1,22 @@
 <?php
-
 require "settings/init.php";
 
-if(!empty($_POST["data"])){
-    $data = $_POST["data"];
+if(!empty($_post["data"])){
+    $data = $_post["data"];
 
-    $sql = "INSERT INTO DATABASE (DATABASE) VALUES(:DATABASE)";
-    $bind = [":DATABASE" => $data["DATABASE"]];
+    $sql = "INSERT INTO produkter (prodNavn, prodBeskrivelse, prodPris, prodAmount, prodimage, prodVare,) 
+            values(:prodNavn, :prodBeskrivelse, :prodPris, :prodAmount, :prodimage, :prodVare";
+    $bind = [":prodNavn" => $data["prodNavn"], ":prodBeskrivelse" => $data["prodBeskrivelse"], ":prodPris" => $data["prodPris"],
+            ":prodAmount" => $data["prodAmount"], ":prodImage" => $data["prodImage"], ":prodVare" => $data["prodVare"]];
 
-    $db->sql( $sql, $bind, false);
+    $db->sql($sql, $bind, false);
 
-    echo "DATABASE data indsendt <a href='Administration.php'>Vil du tilføje flere?</a>";
+    echo "Produktet er nu indsat. <a href='Administration.php'>Indsæt et produkt mere</a>";
+    exit;
 }
-
 ?>
+
+
 <!-- Instruktion til webbrowser om at vi kører HTML5 -->
 <!DOCTYPE html>
 
@@ -79,25 +82,80 @@ if(!empty($_POST["data"])){
         </div>
 </nav>
 
-<form method="post" action="Administration.php">
-    <div class="row">
-        <div class="col-12 col-md-3" style="margin-left: 380px ">
-            <div class="form-group">
-                <label for="DATABASE">Produkt</label>
-                <input class="form-control" type="text" name="data[DATABASE]" id="DATABASE" placeholder="DATABASE" value="">
+<div class="insertTabel" style="">
+    <form method="post" action="Administration.php" enctype="multipart/form-data">
+        <div class="row" style="margin-top: 25px">
+
+            <div class="col-12 col-md-4 offset-2">
+                <div class="form-group">
+                    <label for="prodNavn">Produkt navn</label>
+                    <input class="form-control" type="text" name="data[prodNavn]" id="prodNavn" placeholder="" value="">
+                </div>
             </div>
+
+            <div class="col-12 col-md-4">
+                <div class="form-group">
+                    <label for="prodVare">Produkt type</label>
+                    <input class="form-control" type="text" name="data[prodVare]" id="prodVare" placeholder="" value="">
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4 offset-2" style="margin-top: 25px">
+                <div class="form-group">
+                    <label for="prodPris">Produkt pris</label>
+                    <input class="form-control" type="number" step="0.1" name="data[prodPris]" id="prodPris" placeholder="" value="">
+                </div>
+            </div>
+
+
+            <div class="col-12 col-md-4" style="margin-top: 25px">
+                <div class="form-group">
+                    <label for="prodAmount">Produkt mængde</label>
+                    <input class="form-control" type="number" step="0.1" name="data[prodAmount]" id="prodAmount" placeholder="" value="">
+                </div>
+            </div>
+
+            <div class="col-12 col-md-8 offset-2" style="margin-top: 25px">
+                 <div class="form-group">
+                     <label for="prodBeskrivelse">Produkt beskrivelse</label>
+                     <textarea class="form-control" name="data[prodBeskrivelse]" id="prodBeskrivelse"></textarea>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-8 offset-2" style="margin-top: 25px">
+                <div class="form-group">
+                    <label for="prodimage">Produkt billed</label>
+                    <input class="form-control" type="file" name="data[prodimage]" id="prodimage" placeholder="" value="">
+                </div>
+            </div>
+        
+
         </div>
-        <div class="col-12 col-md-3" style="margin-left: 200px">
-            <div class="form-group" >
-                <label for="DATABASE">Produkt</label>
-                <input class="form-control" type="text" name="data[DATABASE]" id="DATABASE" placeholder="DATABASE" value="">
+    
+        <div class="row" style="margin-top: 50px">
+
+            <div class="col-12 col-md-3 offset-md-4">
+                <button class="form-control btn btn-primary" type="submit" id="btnSubmit">Opret produkt</button>
+            </div>
+
         </div>
-    </div>
-    <div class="row">
-        <div class="col-12 col-md-3" style="margin-left: 380px">
-            <div class="form-group"
-        </div>
-    </div>
+    </form>
+</div>
+
+<footer>
+
+
+
+
+
+</footer>
+
+
+<script>
+    tinymce.init({
+        selector: 'textarea'
+    });
+</script>
 
 
 
@@ -107,7 +165,7 @@ if(!empty($_POST["data"])){
 
 
 
-</form>
+
 
 
 
