@@ -1,7 +1,7 @@
 <?php
 require "settings/init.php";
 
-$produkter = $db->sql("SELECT * FROM produkter");
+$produkter = $db->sql("SELECT * FROM produkter where prodId= 10");
 
 ?>
 <!-- Instruktion til webbrowser om at vi kører HTML5 -->
