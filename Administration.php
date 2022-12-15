@@ -81,13 +81,31 @@ if(!empty($_POST["data"])){
 
 <form method="post" action="Administration.php">
     <div class="row">
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-3" style="margin-left: 380px ">
             <div class="form-group">
-                <label for="DATABASE">DATABASE</label>
+                <label for="DATABASE">Produkt</label>
                 <input class="form-control" type="text" name="data[DATABASE]" id="DATABASE" placeholder="DATABASE" value="">
             </div>
         </div>
+        <div class="col-12 col-md-3" style="margin-left: 200px">
+            <div class="form-group" >
+                <label for="DATABASE">Produkt</label>
+                <input class="form-control" type="text" name="data[DATABASE]" id="DATABASE" placeholder="DATABASE" value="">
+        </div>
     </div>
+    <div class="row">
+        <div class="col-12 col-md-3" style="margin-left: 380px">
+            <div class="form-group"
+        </div>
+    </div>
+
+
+
+
+
+
+
+
 
 </form>
 
