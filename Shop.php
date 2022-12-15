@@ -1,8 +1,7 @@
 <?php
 require "settings/init.php";
 
-$id = $_GET["id"];
-$produkter = $db->sql("SELECT * FROM produkter where prodId= $id");
+$produkter = $db->sql("SELECT * FROM produkter");
 
 ?>
 <!-- Instruktion til webbrowser om at vi kører HTML5 -->
@@ -97,10 +96,10 @@ $produkter = $db->sql("SELECT * FROM produkter where prodId= $id");
     </script>
 
     <script type="module">
-        import produkter from "./Shop.js";
+        import produkter from "./shop.js";
 
-        const Shop = new produkter();
-        Shop.init();
+        const shop = new produkter();
+        shop.init();
 
     </script>
 
