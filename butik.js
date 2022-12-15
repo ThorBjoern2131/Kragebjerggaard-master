@@ -44,7 +44,7 @@ export default class produkter {
                         <h5 class="card-text">${item.prodVare} </h5>
                         <p class="card-text">${item.prodPris} </p>
                         <p class="card-text">${item.prodAmount} </p>
-                        <a href="#" class="btn btn-primary text-white w-100">Se produkt</a>
+                        <a href="Seprodukt.php?id=${item.prodId}" class="btn btn-primary text-white w-100">Se produkt</a>
                     </div>
                 </div>
             </div>
