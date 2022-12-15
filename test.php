@@ -71,22 +71,22 @@ $produkter = $db->sql("SELECT * FROM produkter");
 
 <body>
 <div class="row">
-    <div class="col-6 col-md-6 col-xxl-6 mx-auto">
-
+    <div class="col-12 col-md-4 offset-md-4">
+        <img src="testbillede1.png" class="img-rounded" alt="Cinque Terre">
     </div>
-    <div class="col-6 col-md-6 col-xxl-6">
+    <div class="col-12 col-md-4 offset-md-4">
 
     </div>
 </div>
 
 
 <div class="row">
-    <div class="col-12: col-md-12: col-xl-12">
+    <div class="col-12 col-md-4 offset-md-4">
 
     </div>
 </div>
 <div class="row">
-    <div class="col-12: col-md-12: mx-auto">
+    <div class="col-12 col-md-4 offset-md-4">
 
     </div>
 </div>
