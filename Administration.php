@@ -62,6 +62,9 @@ $produkter = $db->sql("SELECT * FROM produkter");
                 <li class="nav-item">
                     <a class="nav-link disabled">Kontakt os</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="Administration.php">Administration</a>
+                </li>
             </ul>
         </div>
 </nav>
