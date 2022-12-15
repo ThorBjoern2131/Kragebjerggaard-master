@@ -1,17 +1,7 @@
 <?php
-
 require "settings/init.php";
 
-if(!empty($_POST["data"])){
-    $data = $_POST["data"];
-
-    $sql = "INSERT INTO DATABASE (DATABASE) VALUES(:DATABASE)";
-    $bind = [":DATABASE" => $data["DATABASE"]];
-
-    $db->sql( $sql, $bind, false);
-
-    echo "DATABASE data indsendt <a href='Administration.php'>Vil du tilføje flere?</a>";
-}
+$produkter = $db->sql("SELECT * FROM produkter");
 
 ?>
 <!-- Instruktion til webbrowser om at vi kører HTML5 -->
@@ -79,44 +69,44 @@ if(!empty($_POST["data"])){
         </div>
 </nav>
 
-<form method="post" action="Administration.php">
-    <div class="row">
-        <div class="col-12 col-md-3" style="margin-left: 380px ">
-            <div class="form-group">
-                <label for="DATABASE">Produkt</label>
-                <input class="form-control" type="text" name="data[DATABASE]" id="DATABASE" placeholder="DATABASE" value="">
-            </div>
-        </div>
-        <div class="col-12 col-md-3" style="margin-left: 200px">
-            <div class="form-group" >
-                <label for="DATABASE">Produkt</label>
-                <input class="form-control" type="text" name="data[DATABASE]" id="DATABASE" placeholder="DATABASE" value="">
-        </div>
+<body>
+<div class="row">
+    <div class="col-6 col-md-6 col-xxl-6 mx-auto">
+
     </div>
-    <div class="row">
-        <div class="col-12 col-md-3" style="margin-left: 380px">
-            <div class="form-group"
-        </div>
+    <div class="col-6 col-md-6 col-xxl-6">
+
     </div>
+</div>
 
 
+<div class="row">
+    <div class="col-12: col-md-12: col-xl-12">
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-12: col-md-12: mx-auto">
+
+    </div>
+</div>
 
 
+        <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
+        <script>
+            function myFunction(x) {
+                x.classList.toggle("change");
+            }
+        </script>
 
+        <script type="module">
+            import produkter from "./butik";
 
+            const butik = new produkter();
+            butik.init();
 
+        </script>
 
-</form>
-
-
-
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-
-<script>
-    tinymce.init({
-        selector: 'textarea'
-    });
-</script>
 </body>
 </html>
