@@ -70,26 +70,50 @@ $produkter = $db->sql("SELECT * FROM produkter");
 </nav>
 
 <body>
-<div class="row">
-    <div class="col-12 col-md-4 offset-md-4">
-        <img src="testbillede1.png" class="img-rounded" alt="Cinque Terre">
-    </div>
-    <div class="col-12 col-md-4 offset-md-4">
+<form method="post" action="insert.php">
+    </form>
 
-    </div>
-</div>
+    <div class="row">
+        <div class="col 6 col-md-3 offset-md-3">
+            <img src="image/testbillede1.png" class="img-rounded" alt="Her skulle være et fint velkomstbillede!">
+        </div>
+        <div class="col-3 col-md-3">
+            <h1 style="text-align: center">Hellu me am tinking</h1>
+                <div class="col-6 col-md-6 offset-3">
+                <button class="form-control btn-sm btn-success" type="submit" id="btnsubmit">Vores produkter</button>
+            </div>
+        </div>
+
+    <div class="row">
+        <div class="col-6 col-md-3 offset-md-3">
+            <button class="form-control btn btn-success" type="submit" id="btnsubmit">Vores produkter</button>
+        </div>
+        <div class="col 6 col-md-3">
+            <img src="image/testbillede1.png" class="img-rounded" alt="Her skulle være et fint velkomstbillede!">
+        </div>
 
 
-<div class="row">
-    <div class="col-12 col-md-4 offset-md-4">
+        <div class="row">
+            <div class="col 6 col-md-3 offset-md-3">
+                <img src="image/testbillede1.png" class="img-rounded" alt="Her skulle være et fint velkomstbillede!">
+            </div>
+            <div class="col-3 col-md-3">
+                <h1 style="text-align: center">Hellu me am tinking</h1>
+                <div class="col-6 col-md-6 offset-3">
+                    <button class="form-control btn-sm btn-success" type="submit" id="btnsubmit">Vores produkter</button>
+                </div>
+            </div>
 
-    </div>
-</div>
-<div class="row">
-    <div class="col-12 col-md-4 offset-md-4">
-
-    </div>
-</div>
+            <div class="row">
+                <div class="col-3 col-md-3 offset-3">
+                    <h1 style="text-align: center">Hellu me am tinking</h1>
+                    <div class="col-6 col-md-6 offset-3">
+                        <button class="form-control btn-sm btn-success" type="submit" id="btnsubmit">Vores produkter</button>
+                    </div>
+                </div>
+                <div class="col 6 col-md-3">
+                    <img src="image/testbillede1.png" class="img-rounded" alt="Her skulle være et fint velkomstbillede!">
+                </div>
 
 
         <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
