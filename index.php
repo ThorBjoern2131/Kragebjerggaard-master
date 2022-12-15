@@ -94,7 +94,7 @@ $produkter = $db->sql("SELECT * FROM produkter");
     </script>
 
     <script type="module">
-        import produkter from "./butik";
+        import produkter from "./butik.js";
 
         const butik = new produkter();
         butik.init();

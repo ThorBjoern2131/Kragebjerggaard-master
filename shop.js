@@ -16,7 +16,7 @@ export default class produkter {
             this.render();
         });
 
-        //await this.render();
+        await this.render();
     }
 
     async render(){

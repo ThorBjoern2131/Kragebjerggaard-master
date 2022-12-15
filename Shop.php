@@ -96,10 +96,10 @@ $produkter = $db->sql("SELECT * FROM produkter");
     </script>
 
     <script type="module">
-        import produkter from "./butik";
+        import produkter from "./shop.js";
 
-        const butik = new produkter();
-        butik.init();
+        const shop = new produkter();
+        shop.init();
 
     </script>
 

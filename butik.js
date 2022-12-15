@@ -39,12 +39,12 @@ export default class produkter {
               
                 <div class="col-6">
                     <div class="card-body">
-                        <a href="boghandel.js"><h5 class="card-img-top ">${item.prodNavn} </h5></a>
+                        <a href="butik.js"><h5 class="card-img-top ">${item.prodNavn} </h5></a>
                         <h5 class="card-text">${item.prodBeskrivelse} </h5>
                         <h5 class="card-text">${item.prodVare} </h5>
                         <p class="card-text">${item.prodPris} </p>
                         <p class="card-text">${item.prodAmount} </p>
-                        <a href="#" class="btn btn-primary text-white w-100">Se produkt</a>
+                        <a href="Shop.php?id=${items.prodId}" class="btn btn-primary text-white w-100">Se produkt</a>
                     </div>
                 </div>
             </div>
