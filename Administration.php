@@ -66,21 +66,8 @@ $produkter = $db->sql("SELECT * FROM produkter");
         </div>
 </nav>
 
-<div class="container">
-
-    <div class="produkter p-3 m-3">
-        <div class="filter">
-            <div class="row">
-                <div class="col-md-4 offset-md-4">
-                    <input type="search" class="form-control nameSearch" placeholder="søg">
-                </div>
-            </div>
-            <br>
-
-            <div class="items"></div>
 
 
-    </div>
 
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
