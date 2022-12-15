@@ -1,7 +1,17 @@
 <?php
+
 require "settings/init.php";
 
-$produkter = $db->sql("SELECT * FROM produkter");
+if(!empty($_POST["data"])){
+    $data = $_POST["data"];
+
+    $sql = "INSERT INTO DATABASE (DATABASE) VALUES(:DATABASE)";
+    $bind = [":DATABASE" => $data["DATABASE"]];
+
+    $db->sql( $sql, $bind, false);
+
+    echo "DATABASE data indsendt <a href='Administration.php'>Vil du tilføje flere?</a>";
+}
 
 ?>
 <!-- Instruktion til webbrowser om at vi kører HTML5 -->
@@ -69,37 +79,26 @@ $produkter = $db->sql("SELECT * FROM produkter");
         </div>
 </nav>
 
-<div class="container">
-
-    <div class="produkter p-3 m-3">
-        <div class="filter">
-            <div class="row">
-                <div class="col-md-4 offset-md-4">
-                    <input type="search" class="form-control nameSearch" placeholder="søg">
-                </div>
+<form method="post" action="Administration.php">
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <div class="form-group">
+                <label for="DATABASE">DATABASE</label>
+                <input class="form-control" type="text" name="data[DATABASE]" id="DATABASE" placeholder="DATABASE" value="">
             </div>
-            <br>
-
-            <div class="items"></div>
-
-
+        </div>
     </div>
+
+</form>
+
+
 
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script>
-        function myFunction(x) {
-            x.classList.toggle("change");
-        }
-    </script>
-
-    <script type="module">
-        import produkter from "./butik";
-
-        const butik = new produkter();
-        butik.init();
-
-    </script>
-
+<script>
+    tinymce.init({
+        selector: 'textarea'
+    });
+</script>
 </body>
 </html>

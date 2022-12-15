@@ -78,10 +78,12 @@ $produkter = $db->sql("SELECT * FROM produkter");
                     <input type="search" class="form-control nameSearch" placeholder="søg">
                 </div>
             </div>
-            <br>
+        </div>
+        <br>
 
-            <div class="items"></div>
+        <div class="items">
 
+        </div>
 
     </div>
 
