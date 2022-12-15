@@ -1,4 +1,4 @@
-export default class produkter {
+export default class  {
     constructor() {
         this.data = {
             password:"KickPHP"
