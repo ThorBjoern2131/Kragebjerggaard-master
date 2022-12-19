@@ -3,16 +3,25 @@ require "settings/init.php";
 
 if(!empty($_post["data"])){
     $data = $_post["data"];
+    $file = $_FILES;
 
-    $sql = "INSERT INTO produkter (prodNavn, prodBeskrivelse, prodPris, prodAmount, prodimage, prodVare,) 
-            values(:prodNavn, :prodBeskrivelse, :prodPris, :prodAmount, :prodimage, :prodVare";
-    $bind = [":prodNavn" => $data["prodNavn"], ":prodBeskrivelse" => $data["prodBeskrivelse"], ":prodPris" => $data["prodPris"],
-            ":prodAmount" => $data["prodAmount"], ":prodImage" => $data["prodImage"], ":prodVare" => $data["prodVare"]];
+    if(!empty($file["prodImage"]["tmp_name"])){
+        move_uploaded_file($file["prodImage"]["tmp_name"], "uplads/" . basename($file["prodImage"]["name"]));
+    }
+
+    $sql = "INSERT INTO produkter (prodNavn, prodBeskrivelse, prodPris, prodAmount, prodImage, prodVare,) 
+            values(:prodNavn, :prodBeskrivelse, :prodPris, :prodAmount, :prodImage, :prodVare";
+    $bind = [":prodNavn" => $data["prodNavn"],
+             ":prodBeskrivelse" => $data["prodBeskrivelse"],
+             ":prodPris" => $data["prodPris"],
+             ":prodAmount" => $data["prodAmount"],
+             ":prodImage" => (!empty($file["prodImage"]["tmp_name"])) ? $file["prodImage"]["name"] : NULL,
+             ":prodVare" => $data["prodVare"]];
 
     $db->sql($sql, $bind, false);
 
     echo "Produktet er nu indsat. <a href='Administration.php'>Indsæt et produkt mere</a>";
-    exit;
+
 }
 ?>
 
@@ -124,8 +133,8 @@ if(!empty($_post["data"])){
 
             <div class="col-12 col-md-8 offset-2" style="margin-top: 25px">
                 <div class="form-group">
-                    <label for="prodimage">Produkt billed</label>
-                    <input class="form-control" type="file" name="data[prodimage]" id="prodimage" placeholder="" value="">
+                    <label for="prodImage">Produkt billed</label>
+                    <input class="form-control" type="file" name="data[prodImage]" id="prodImage" placeholder="" value="">
                 </div>
             </div>
         
@@ -135,18 +144,24 @@ if(!empty($_post["data"])){
         <div class="row" style="margin-top: 50px">
 
             <div class="col-12 col-md-3 offset-md-4">
-                <button class="form-control btn btn-primary" type="submit" id="btnSubmit">Opret produkt</button>
+
+                <button class="form-control btn btn-primary" type="submit" id="btnSubmit">Tilføj produkt</button>
+
             </div>
 
         </div>
     </form>
 </div>
 
-<footer>
+<footer class="row">
+    <div class="col-12: col-md-12: col-xl-12 ">
+        <div class="rektangel">
+            <div class="footer_picture">
+                <img src="Images/Lokation_&_some.PNG" alt="">
+            </div>
 
-
-
-
+        </div>
+    </div>
 
 </footer>
 
