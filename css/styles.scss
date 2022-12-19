@@ -36,3 +36,31 @@ img {
 	background-color: #D4D3B9;
 	background-size: cover;
 }
+
+footer {
+	background: #20c997;
+	color: white;
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.grid-container {
+	display:grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 1fr;
+	background-color: #B0C3A7;
+}
+
+.footerR {
+	text-align: right;
+	float: left;
+}
+
+.topnav {
+	overflow: hidden;
+	background-color: #483B06;
+	text-align: center;
+	align-items: center;
+	align-content: center;
+}

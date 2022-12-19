@@ -8,12 +8,14 @@ $produkter = $db->sql("SELECT * FROM produkter");
 <!DOCTYPE html>
 
 <!-- html starter og slutter hele dokumentet / lang=da: Fortæller siden er på dansk -->
-<html lang="da">
+<html lang="da" xmlns="http://www.w3.org/1999/html">
 
 <!-- I <head> har man opsætning - det ser brugeren ikke, men det fortæller noget om siden -->
 <head>
     <!-- Sætter tegnsætning til utf-8 som bl.a. tillader danske bogstaver -->
     <meta charset="utf-8">
+
+    <script src="https://kit.fontawesome.com/b1ab35831a.js" crossorigin="anonymous"></script>
 
     <!-- Titel som ses oppe i browserens tab mv. -->
     <title>Kragebjerggård</title>
@@ -75,7 +77,7 @@ $produkter = $db->sql("SELECT * FROM produkter");
 
     <div class="row">
         <div class="col 6 col-md-3 offset-md-3">
-            <img src="image/testbillede1.png" class="img-rounded" alt="Her skulle være et fint velkomstbillede!">
+            <img src="images/testbillede1.png" class="img-rounded" alt="Her skulle være et fint velkomstbillede!">
         </div>
         <div class="col-3 col-md-3">
             <h1 style="text-align: center">Hellu me am tinking</h1>
@@ -89,13 +91,13 @@ $produkter = $db->sql("SELECT * FROM produkter");
             <button class="form-control btn btn-success" type="submit" id="btnsubmit">Vores produkter</button>
         </div>
         <div class="col 6 col-md-3">
-            <img src="image/testbillede1.png" class="img-rounded" alt="Her skulle være et fint velkomstbillede!">
+            <img src="images/testbillede1.png" class="img-rounded" alt="Her skulle være et fint velkomstbillede!">
         </div>
 
 
         <div class="row">
             <div class="col 6 col-md-3 offset-md-3">
-                <img src="image/testbillede1.png" class="img-rounded" alt="Her skulle være et fint velkomstbillede!">
+                <img src="images/testbillede1.png" class="img-rounded" alt="Her skulle være et fint velkomstbillede!">
             </div>
             <div class="col-3 col-md-3">
                 <h1 style="text-align: center">Hellu me am tinking</h1>
@@ -112,7 +114,7 @@ $produkter = $db->sql("SELECT * FROM produkter");
                     </div>
                 </div>
                 <div class="col 6 col-md-3">
-                    <img src="image/testbillede1.png" class="img-rounded" alt="Her skulle være et fint velkomstbillede!">
+                    <img src="images/testbillede1.png" class="img-rounded" alt="Her skulle være et fint velkomstbillede!">
                 </div>
 
 
@@ -124,13 +126,84 @@ $produkter = $db->sql("SELECT * FROM produkter");
             }
         </script>
 
-        <script type="module">
-            import produkter from "./butik";
+    <div class="row">
+        <div class="col 6 col-md-3 offset-md-3">
+            <img src="images/testbillede1.png" class="img-rounded" alt="Her skulle være et fint velkomstbillede!">
+        </div>
 
-            const butik = new produkter();
-            butik.init();
+        <div class="col-3 col-md-3">
+            <h1 style="text-align: center">Hellu me am tinking</h1>
+        <div class="col-6 col-md-6 offset-3">
+            <button class="form-control btn-sm btn-success" type="submit" id="btnsubmit">Vores produkter</button>
+        </div>
+    </div>
 
-        </script>
+<footer>
+    <div class="container">
+    <!--Grid row-->
+    <div class="row">
+        <div class="col-md-3 offset-md-1 mb-2" style="text-align: center">
+            <h5 class="text-uppercase">Kragebjerggård</h5>
+
+            <ul class="list-unstyled">
+                <li>
+                    <p>Kragebjerggård er fantastisk bla bla, vi har produceret landbrugs vare i mange år, vi elsker tilfredse kunder, karamelis over alt andet is</p>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="col-md-3 offset-md-1 mb-2" style="text-align: center">
+            <h5 class="text-uppercase">Social Media</h5>
+
+            <ul class="list-unstyled">
+                <li>
+                <p><i class="fa-brands fa-facebook"></i> Kragebjerggaard</p>
+                </li>
+                <li>
+                    <p><i class="fa-brands fa-instagram"></i> Kragebjerggaard</p>
+                </li>
+                <li>
+                    <p><i class="fa-brands fa-twitter"></i> Kragebjerggaard</p>
+                </li>
+                <li>
+                    <p><i class="fa-brands fa-tiktok"></i> Kragebjerggaard</p>
+                </li>
+            </ul>
+        </div>
+
+        <!--Grid column-->
+        <div class="col-md-3 offset-md-1" style="text-align: center">
+            <h5 class="text-uppercase">Kontakt</h5>
+
+            <ul class="list-unstyled">
+                <li>
+                    <p><i class="fas fa-house"></i> 4296 Nyrup, Kragebjerggaard 1</p>
+                </li>
+                <li>
+                    <p><i class="fas fa-phone"></i> +45 64 27 36 96</p>
+                </li>
+                <li>
+                    <p><i class="fas fa-envelope"></i> Kragebjerg@gaard.com</p>
+                </li>
+                <li>
+                    <p><i class="fas fa-clock"></i> 08:00 - 15:00</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</footer>
+
+
+
+    <script type="module">
+        import produkter from "./butik";
+
+        const butik = new produkter();
+        butik.init();
+
+    </script>
 
 </body>
 </html>

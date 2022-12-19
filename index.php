@@ -93,6 +93,7 @@ $produkter = $db->sql("SELECT * FROM produkter");
         }
     </script>
 
+
     <script type="module">
         import produkter from "./butik.js";
 

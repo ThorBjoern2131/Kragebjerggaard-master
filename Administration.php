@@ -153,17 +153,6 @@ if(!empty($_post["data"])){
     </form>
 </div>
 
-<footer class="row">
-    <div class="col-12: col-md-12: col-xl-12 ">
-        <div class="rektangel">
-            <div class="footer_picture">
-                <img src="Images/Lokation_&_some.PNG" alt="">
-            </div>
-
-        </div>
-    </div>
-
-</footer>
 
 
 <script>
