@@ -6,7 +6,7 @@ $produkter = $db->sql("SELECT * FROM produkter");
 ?>
 <!-- Instruktion til webbrowser om at vi kører HTML5 -->
 <!DOCTYPE html>
-
+<!-- hej -->
 <!-- html starter og slutter hele dokumentet / lang=da: Fortæller siden er på dansk -->
 <html lang="da" xmlns="http://www.w3.org/1999/html">
 
