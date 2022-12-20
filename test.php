@@ -132,7 +132,9 @@ $produkter = $db->sql("SELECT * FROM produkter");
         </div>
 
         <div class="col-3 col-md-3">
-            <h1 style="text-align: center">Hellu me am tinking</h1>
+            <h5 style="text-align: center; color: #F58F00">Velkommen til</h5>
+            <h3 style="text-align: center; color: #146c43">Kragebjerggård</h3>
+            <p style="text-align: center; color: #146c43">kragebjergård </p>
         <div class="col-6 col-md-6 offset-3">
             <button class="form-control btn-sm btn-success" type="submit" id="btnsubmit">Vores produkter</button>
         </div>
@@ -140,7 +142,6 @@ $produkter = $db->sql("SELECT * FROM produkter");
 
 <footer>
     <div class="container">
-    <!--Grid row-->
     <div class="row">
         <div class="col-md-3 offset-md-1 mb-2" style="text-align: center">
             <h5 class="text-uppercase">Kragebjerggård</h5>
@@ -152,27 +153,25 @@ $produkter = $db->sql("SELECT * FROM produkter");
             </ul>
         </div>
 
-
         <div class="col-md-3 offset-md-1 mb-2" style="text-align: center">
             <h5 class="text-uppercase">Social Media</h5>
 
             <ul class="list-unstyled">
                 <li>
-                <p><i class="fa-brands fa-facebook"></i> Kragebjerggaard</p>
+                    <a href="404.php" style="text-decoration: none; color: white"><i class="fa-brands fa-facebook"></i> Kragebjerggaard</a>
                 </li>
                 <li>
-                    <p><i class="fa-brands fa-instagram"></i> Kragebjerggaard</p>
+                    <a href="404.php" style="text-decoration: none; color: white"><i class="fa-brands fa-instagram"></i> Kragebjerggaard</a>
                 </li>
                 <li>
-                    <p><i class="fa-brands fa-twitter"></i> Kragebjerggaard</p>
+                    <a href="404.php" style="text-decoration: none; color: white"><i class="fa-brands fa-twitter"></i> Kragebjerggaard</a>
                 </li>
                 <li>
-                    <p><i class="fa-brands fa-tiktok"></i> Kragebjerggaard</p>
+                    <a href="404.php" style="text-decoration: none; color: white"><i class="fa-brands fa-tiktok"></i> Kragebjerggaard</a>
                 </li>
             </ul>
         </div>
 
-        <!--Grid column-->
         <div class="col-md-3 offset-md-1" style="text-align: center">
             <h5 class="text-uppercase">Kontakt</h5>
 
@@ -194,8 +193,6 @@ $produkter = $db->sql("SELECT * FROM produkter");
     </div>
 </div>
 </footer>
-
-
 
     <script type="module">
         import produkter from "./butik";
