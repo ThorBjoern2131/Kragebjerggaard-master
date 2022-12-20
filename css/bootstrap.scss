@@ -9,13 +9,15 @@
 Eksempel på farver
 $custom-colors: (
         "primary": #0000ff,
-        "minFarve": #ffff00
+        "minFarve": #ffff00,
+        "footer farve": #20c997
 );
  */
 
 $custom-colors: (
-        "primary": #007bff
+        "primary": #007bff,
 );
+
 $theme-colors: map-merge($theme-colors, $custom-colors);
 
 @import "../node_modules/bootstrap/scss/bootstrap";
