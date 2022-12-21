@@ -96,12 +96,12 @@ $produkter = $db->sql("SELECT * FROM produkter");
                 <button class="form-control btn-sm btn-success" type="submit" id="btnsubmit">Læs mere</button>
             </div>
         </div>
-        <div class="col 6 col-md-3">
+        <div class="col 6 col-md-3"><br>
             <img src="images/Historie.jpg" class="picture" alt="Her skulle være et fint velkomstbillede!">
         </div>
 
     <div class="row">
-        <div class="col 6 col-md-3 offset-md-3">
+        <div class="col 6 col-md-3 offset-md-3"><br>
             <img src="images/Produkter.jpg" class="img-rounded" style="width: 400px; height: 270px" alt="Her skulle være et fint velkomstbillede!">
         </div>
         <div class="col-3 col-md-3">
@@ -122,12 +122,12 @@ $produkter = $db->sql("SELECT * FROM produkter");
                 <button class="form-control btn-sm btn-success" type="submit" id="btnsubmit">Læs mere</button>
             </div>
         </div>
-        <div class="col 6 col-md-3">
+        <div class="col 6 col-md-3"><br>
             <img src="images/Økologi.jpg" class="img-rounded" alt="Her skulle være et fint velkomstbillede!">
         </div>
 
     <div class="row">
-        <div class="col 6 col-md-3 offset-md-3">
+        <div class="col 6 col-md-3 offset-md-3"><br>
             <img src="images/SenesteNyt.jpg" class="img-rounded" alt="Her skulle være et fint velkomstbillede!"> <br>
         </div>
         <div class="col-3 col-md-3">
