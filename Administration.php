@@ -79,7 +79,7 @@ if(!empty($_post["data"])){
                     <a class="nav-link active" href="Shop.php">Shop</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Gården</a>
+                    <a class="nav-link active" href="404.php">Gården</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link disabled">Kontakt os</a>
