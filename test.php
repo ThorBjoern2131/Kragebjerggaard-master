@@ -42,7 +42,7 @@ $produkter = $db->sql("SELECT * FROM produkter");
 </head>
 
 
-<body>
+<body style="background-color: lightgreen;">
 
 <nav class="navbar navbar-expand-lg bg-light" style="height: 4rem">
     <div class="container-fluid">
@@ -59,7 +59,7 @@ $produkter = $db->sql("SELECT * FROM produkter");
                     <a class="nav-link active" href="Shop.php">Shop</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Gården</a>
+                    <a class="nav-link active" href="404.php">Gården</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link disabled">Kontakt os</a>
@@ -71,51 +71,73 @@ $produkter = $db->sql("SELECT * FROM produkter");
         </div>
 </nav>
 
-<body>
-<form method="post" action="insert.php">
-    </form>
+<div class="row">
+    <div class="col 6 col-md-3 offset-md-3"><br>
+        <img src="images/Velkommen.png" class="align-content-center" alt="Her skulle være et fint velkomstbillede!">
+    </div>
+
+    <div class="col-3 col-md-3"><br><br><br>
+        <h5 style="text-align: center; color: #146c43">Velkommen til</h5>
+        <h3 style="text-align: center; color: #146c43">Kragebjerggård</h3>
+        <p style="text-align: center; color: #146c43">Vi er en gårdbutik, der sælger landbrugsvare. Vi dyrker selv vores afgrøder og triver den året rundt</p>
+        <div class="col-6 col-md-6 offset-3"><br>
+            <button class="form-control btn-sm btn-success" type="submit" id="btnsubmit">Vores produkter</button>
+        </div>
+    </div>
+
 
     <div class="row">
-        <div class="col 6 col-md-3 offset-md-3">
-            <img src="images/testbillede1.png" class="img-rounded" alt="Her skulle være et fint velkomstbillede!">
+        <div class="col-6 col-md-3 offset-md-3"><br><br><br>
+            <h5 style="text-align: center; color: #146c43">Kragebjerggårds</h5>
+            <h3 style="text-align: center; color: #146c43">Historie</h3>
+            <p style="text-align: center; color: #146c43">Erik og Lisa startede gårdbutikken i 1964, hvorefter de siden har udvidet butikken og fået ansatte til hjælp af
+            plejelse af afgrøder og salg.</p>
+            <div class="col-6 col-md-6 offset-3"><br>
+                <button class="form-control btn-sm btn-success" type="submit" id="btnsubmit">Læs mere</button>
+            </div>
+        </div>
+        <div class="col 6 col-md-3"><br>
+            <img src="images/Historie.jpg" class="picture" alt="Her skulle være et fint velkomstbillede!">
+        </div>
+
+    <div class="row">
+        <div class="col 6 col-md-3 offset-md-3"><br>
+            <img src="images/Produkter.jpg" class="img-rounded" style="width: 400px; height: 270px" alt="Her skulle være et fint velkomstbillede!">
         </div>
         <div class="col-3 col-md-3">
-            <h1 style="text-align: center">Hellu me am tinking</h1>
-                <div class="col-6 col-md-6 offset-3">
+            <br><br>
+            <h2 style="text-align: center; color: #146c43">Produkter</h2>
+            <p style="text-align: center; color: #146c43">Vi sælger flere former og variationer af økologiske friluftsgrøntsager og mælkeprodukter</p>
+            <div class="col-6 col-md-6 offset-3"><br>
                 <button class="form-control btn-sm btn-success" type="submit" id="btnsubmit">Vores produkter</button>
             </div>
         </div>
 
     <div class="row">
-        <div class="col-6 col-md-3 offset-md-3">
-            <button class="form-control btn btn-success" type="submit" id="btnsubmit">Vores produkter</button>
-        </div>
-        <div class="col 6 col-md-3">
-            <img src="images/testbillede1.png" class="img-rounded" alt="Her skulle være et fint velkomstbillede!">
-        </div>
-
-
-        <div class="row">
-            <div class="col 6 col-md-3 offset-md-3">
-                <img src="images/testbillede1.png" class="img-rounded" alt="Her skulle være et fint velkomstbillede!">
+        <div class="col-3 col-md-3 offset-3">
+            <br><br>
+            <h2 style="text-align: center; color: #146c43">Økologi</h2>
+            <p style="text-align: center; color: #146c43">Vores varer er alle økologiske og dyrker i ren økologi, og har fået økologi mærket tildelt</p>
+            <div class="col-6 col-md-6 offset-3"><br>
+                <button class="form-control btn-sm btn-success" type="submit" id="btnsubmit">Læs mere</button>
             </div>
-            <div class="col-3 col-md-3">
-                <h1 style="text-align: center">Hellu me am tinking</h1>
-                <div class="col-6 col-md-6 offset-3">
-                    <button class="form-control btn-sm btn-success" type="submit" id="btnsubmit">Vores produkter</button>
-                </div>
-            </div>
+        </div>
+        <div class="col 6 col-md-3"><br>
+            <img src="images/Økologi.jpg" class="img-rounded" alt="Her skulle være et fint velkomstbillede!">
+        </div>
 
-            <div class="row">
-                <div class="col-3 col-md-3 offset-3">
-                    <h1 style="text-align: center">Hellu me am tinking</h1>
-                    <div class="col-6 col-md-6 offset-3">
-                        <button class="form-control btn-sm btn-success" type="submit" id="btnsubmit">Vores produkter</button>
-                    </div>
-                </div>
-                <div class="col 6 col-md-3">
-                    <img src="images/testbillede1.png" class="img-rounded" alt="Her skulle være et fint velkomstbillede!">
-                </div>
+    <div class="row">
+        <div class="col 6 col-md-3 offset-md-3"><br>
+            <img src="images/SenesteNyt.jpg" class="img-rounded" alt="Her skulle være et fint velkomstbillede!"> <br>
+        </div>
+        <div class="col-3 col-md-3">
+            <br><br>
+            <h2 style="text-align: center; color: #146c43">Seneste Nyt</h2>
+            <p style="text-align: center; color: #146c43">Vi har fået hjælp af Viksen A/S til opsætning af et helt nyt drivhus til at afprøve nye metoder på nogen af vores grøntsager</p>
+            <div class="col-6 col-md-6 offset-3"><br>
+                <button class="form-control btn-sm btn-success" type="submit" id="btnsubmit">Vores produkter</button>
+            </div>
+        </div>
 
 
         <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
@@ -126,20 +148,6 @@ $produkter = $db->sql("SELECT * FROM produkter");
             }
         </script>
 
-    <div class="row">
-        <div class="col 6 col-md-3 offset-md-3">
-            <img src="images/testbillede1.png" class="img-rounded" alt="Her skulle være et fint velkomstbillede!">
-        </div>
-
-        <div class="col-3 col-md-3">
-            <h5 style="text-align: center; color: #F58F00">Velkommen til</h5>
-            <h3 style="text-align: center; color: #146c43">Kragebjerggård</h3>
-            <p style="text-align: center; color: #146c43">kragebjergård </p>
-        <div class="col-6 col-md-6 offset-3">
-            <button class="form-control btn-sm btn-success" type="submit" id="btnsubmit">Vores produkter</button>
-        </div>
-    </div>
-
 <footer>
     <div class="container">
     <div class="row">
@@ -148,7 +156,7 @@ $produkter = $db->sql("SELECT * FROM produkter");
 
             <ul class="list-unstyled">
                 <li>
-                    <p>Kragebjerggård er fantastisk bla bla, vi har produceret landbrugs vare i mange år, vi elsker tilfredse kunder, karamelis over alt andet is</p>
+                    <p>Kragebjerggård er en gård fyldt med store smil samt massere af glæde og du skal være mere end velkommen til at komme forbi.</p>
                 </li>
             </ul>
         </div>
