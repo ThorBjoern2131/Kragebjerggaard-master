@@ -86,7 +86,6 @@ $produkter = $db->sql("SELECT * FROM produkter");
     </div>
 
 
-    <div class="row">
         <div class="col-6 col-md-3 offset-md-3"><br><br><br>
             <h5 style="text-align: center; color: #146c43">Kragebjerggårds</h5>
             <h3 style="text-align: center; color: #146c43">Historie</h3>
@@ -100,7 +99,6 @@ $produkter = $db->sql("SELECT * FROM produkter");
             <img src="images/Historie.jpg" class="picture" alt="Her skulle være et fint velkomstbillede!">
         </div>
 
-    <div class="row">
         <div class="col 6 col-md-3 offset-md-3"><br>
             <img src="images/Produkter.jpg" class="img-rounded" style="width: 400px; height: 270px" alt="Her skulle være et fint velkomstbillede!">
         </div>
@@ -113,7 +111,6 @@ $produkter = $db->sql("SELECT * FROM produkter");
             </div>
         </div>
 
-    <div class="row">
         <div class="col-3 col-md-3 offset-3">
             <br><br>
             <h2 style="text-align: center; color: #146c43">Økologi</h2>
@@ -126,7 +123,6 @@ $produkter = $db->sql("SELECT * FROM produkter");
             <img src="images/Økologi.jpg" class="img-rounded" alt="Her skulle være et fint velkomstbillede!">
         </div>
 
-    <div class="row">
         <div class="col 6 col-md-3 offset-md-3"><br>
             <img src="images/SenesteNyt.jpg" class="img-rounded" alt="Her skulle være et fint velkomstbillede!"> <br>
         </div>
