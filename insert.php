@@ -76,7 +76,7 @@ if(!empty($_post["data"])){
 
         <div class="col-12 col-md-6">
             <div class="form-group">
-                <label for="prodimage">Produkt billed</label>
+                <label for="prodimage">Produkt billede</label>
                 <input class="form-control" type="file" name="data[prodimage]" id="prodimage" placeholder="" value="">
             </div>
         </div>

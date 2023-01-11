@@ -1,14 +1,6 @@
 <?php
-//Vi er nu på "api.php" hvor vi vil lave en API vi kan hente data og få data fra
-//require (også kendt som include men har forskellen at require stopper scriptet
-//mens include ikke stopper scriptet og kun afsender en advarsel
-//require inkludere en specifik fil i vores script som her er "init.php"
 require "settings/init.php";
 
-//Vi vil gerne kunne gemme data som vi får fra andre systemer, så her starter vi med at lave en data variabel
-//Det meste data vi vil modtage er json data, men det kan vi heldigvis afkode til en array som vi gør her
-//For at hente dataen bruger vi file_get_content og angiver det skal være vores "php://input" som giver os alt dataen fra siden
-//Tilsidst angiver vi at json_decode funktionen skal være "true", hvor vi laver en associative array
 $data = json_decode(file_get_contents('php://input'), true);
 
 /*
