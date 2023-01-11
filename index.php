@@ -42,7 +42,7 @@ $produkter = $db->sql("SELECT * FROM produkter");
 </head>
 
 
-<body style="background-color: fffbf0;">
+<body style="background-color: #fffbf0;">
 
 <nav class="navbar navbar-expand-lg" style="height: 4rem; background-color: lightgreen;">
     <div class="container-fluid">
