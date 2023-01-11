@@ -111,7 +111,10 @@ $produkter = $db->sql("SELECT * FROM produkter where prodId= $id");
         x.classList.toggle("change");
     }
 </script>
-
+<br><br>
+<br><br>
+<br><br>
+<br><br>
 <footer>
     <div class="container">
         <div class="row">
