@@ -62,9 +62,9 @@ if(!empty($_post["data"])){
 </head>
 
 
-<body>
+<body style="background-color: #fffbf0;">
 
-<nav class="navbar navbar-expand-lg bg-light" style="height: 4rem">
+<nav class="navbar navbar-expand-lg" style="height: 4rem; background-color: lightgreen;">
     <div class="container-fluid">
         <a class="navbar-brand" style="font-family: 'Baskerville Old Face'" href="index.php">Kragebjerggård</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -153,7 +153,61 @@ if(!empty($_post["data"])){
     </form>
 </div>
 
+<br><br>
 
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 offset-md-1 mb-2" style="text-align: center">
+                <h5 class="text-uppercase">Kragebjerggård</h5>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <p>Kragebjerggård er en gård fyldt med store smil samt massere af glæde og du skal være mere end velkommen til at komme forbi.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 offset-md-1 mb-2" style="text-align: center">
+                <h5 class="text-uppercase">Social Media</h5>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="404.php" style="text-decoration: none; color: white"><i class="fa-brands fa-facebook"></i> Kragebjerggaard</a>
+                    </li>
+                    <li>
+                        <a href="404.php" style="text-decoration: none; color: white"><i class="fa-brands fa-instagram"></i> Kragebjerggaard</a>
+                    </li>
+                    <li>
+                        <a href="404.php" style="text-decoration: none; color: white"><i class="fa-brands fa-twitter"></i> Kragebjerggaard</a>
+                    </li>
+                    <li>
+                        <a href="404.php" style="text-decoration: none; color: white"><i class="fa-brands fa-tiktok"></i> Kragebjerggaard</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 offset-md-1" style="text-align: center">
+                <h5 class="text-uppercase">Kontakt</h5>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <p><i class="fas fa-house"></i> 4296 Nyrup, Kragebjerggaard 1</p>
+                    </li>
+                    <li>
+                        <p><i class="fas fa-phone"></i> +45 64 27 36 96</p>
+                    </li>
+                    <li>
+                        <p><i class="fas fa-envelope"></i> Kragebjerg@gaard.com</p>
+                    </li>
+                    <li>
+                        <p><i class="fas fa-clock"></i> 08:00 - 15:00</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
 
 <script>
     tinymce.init({

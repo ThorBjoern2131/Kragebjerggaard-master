@@ -42,9 +42,9 @@ $produkter = $db->sql("SELECT * FROM produkter");
 </head>
 
 
-<body>
+<body style="background-color: #fffbf0;">
 
-<nav class="navbar navbar-expand-lg bg-light" style="height: 4rem">
+<nav class="navbar navbar-expand-lg" style="height: 4rem; background-color: lightgreen;">
     <div class="container-fluid">
         <a class="navbar-brand" style="font-family: 'Baskerville Old Face'" href="index.php">Kragebjerggård</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
