@@ -72,7 +72,7 @@ $produkter = $db->sql("SELECT * FROM produkter");
 </nav>
 
 <div class="row">
-    <div class="col 6 col-md-3 offset-md-3"><br>
+    <div class="col-6 col-md-3 offset-md-3"><br>
         <img src="images/Velkommen.png" class="align-content-center" alt="Her skulle være et fint velkomstbillede!">
     </div>
 
@@ -144,59 +144,59 @@ $produkter = $db->sql("SELECT * FROM produkter");
         }
     </script>
 
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 offset-md-1 mb-2" style="text-align: center">
-                    <h5 class="text-uppercase">Kragebjerggård</h5>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 offset-md-1 mb-2" style="text-align: center">
+                <h5 class="text-uppercase">Kragebjerggård</h5>
 
-                    <ul class="list-unstyled">
-                        <li>
-                            <p>Kragebjerggård er en gård fyldt med store smil samt massere af glæde og du skal være mere end velkommen til at komme forbi.</p>
-                        </li>
-                    </ul>
-                </div>
+                <ul class="list-unstyled">
+                    <li>
+                        <p>Kragebjerggård er en gård fyldt med store smil samt massere af glæde og du skal være mere end velkommen til at komme forbi.</p>
+                    </li>
+                </ul>
+            </div>
 
-                <div class="col-md-3 offset-md-1 mb-2" style="text-align: center">
-                    <h5 class="text-uppercase">Social Media</h5>
+            <div class="col-md-3 offset-md-1 mb-2" style="text-align: center">
+                <h5 class="text-uppercase">Social Media</h5>
 
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="404.php" style="text-decoration: none; color: white"><i class="fa-brands fa-facebook"></i> Kragebjerggaard</a>
-                        </li>
-                        <li>
-                            <a href="404.php" style="text-decoration: none; color: white"><i class="fa-brands fa-instagram"></i> Kragebjerggaard</a>
-                        </li>
-                        <li>
-                            <a href="404.php" style="text-decoration: none; color: white"><i class="fa-brands fa-twitter"></i> Kragebjerggaard</a>
-                        </li>
-                        <li>
-                            <a href="404.php" style="text-decoration: none; color: white"><i class="fa-brands fa-tiktok"></i> Kragebjerggaard</a>
-                        </li>
-                    </ul>
-                </div>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="404.php" style="text-decoration: none; color: white"><i class="fa-brands fa-facebook"></i> Kragebjerggaard</a>
+                    </li>
+                    <li>
+                        <a href="404.php" style="text-decoration: none; color: white"><i class="fa-brands fa-instagram"></i> Kragebjerggaard</a>
+                    </li>
+                    <li>
+                        <a href="404.php" style="text-decoration: none; color: white"><i class="fa-brands fa-twitter"></i> Kragebjerggaard</a>
+                    </li>
+                    <li>
+                        <a href="404.php" style="text-decoration: none; color: white"><i class="fa-brands fa-tiktok"></i> Kragebjerggaard</a>
+                    </li>
+                </ul>
+            </div>
 
-                <div class="col-md-3 offset-md-1" style="text-align: center">
-                    <h5 class="text-uppercase">Kontakt</h5>
+            <div class="col-md-3 offset-md-1" style="text-align: center">
+                <h5 class="text-uppercase">Kontakt</h5>
 
-                    <ul class="list-unstyled">
-                        <li>
-                            <p><i class="fas fa-house"></i> 4296 Nyrup, Kragebjerggaard 1</p>
-                        </li>
-                        <li>
-                            <p><i class="fas fa-phone"></i> +45 64 27 36 96</p>
-                        </li>
-                        <li>
-                            <p><i class="fas fa-envelope"></i> Kragebjerg@gaard.com</p>
-                        </li>
-                        <li>
-                            <p><i class="fas fa-clock"></i> 08:00 - 15:00</p>
-                        </li>
-                    </ul>
-                </div>
+                <ul class="list-unstyled">
+                    <li>
+                        <p><i class="fas fa-house"></i> 4296 Nyrup, Kragebjerggaard 1</p>
+                    </li>
+                    <li>
+                        <p><i class="fas fa-phone"></i> +45 64 27 36 96</p>
+                    </li>
+                    <li>
+                        <p><i class="fas fa-envelope"></i> Kragebjerg@gaard.com</p>
+                    </li>
+                    <li>
+                        <p><i class="fas fa-clock"></i> 08:00 - 15:00</p>
+                    </li>
+                </ul>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
 
     <script type="module">
         import produkter from "./butik";
