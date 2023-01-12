@@ -71,6 +71,8 @@ $produkter = $db->sql("SELECT * FROM produkter");
         </div>
 </nav>
 
+
+
 <div class="row">
     <div class="col-6 col-md-3 offset-md-3"><br>
         <img src="images/Velkommen.png" class="align-content-center" alt="Her skulle være et fint velkomstbillede!">

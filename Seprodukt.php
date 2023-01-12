@@ -80,7 +80,7 @@ $produkter = $db->sql("SELECT * FROM produkter where prodId= $id");
     <div class="row">
 
         <div class="col-lg-6">
-            <img src="#" class="card-img-top" style="max-width: 25rem;" alt="cover">
+            <img src="images/mini mælk.png" class="card-img-top" style="max-width: 25rem;" alt="cover">
         </div>
 
         <div class="col-lg-4">
